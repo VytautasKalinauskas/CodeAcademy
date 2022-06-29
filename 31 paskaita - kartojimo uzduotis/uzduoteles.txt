@@ -1,0 +1,43 @@
+1. Sukurti klase Parduotuve, kuri turetu kintamuosius: adresas (String), darbuotojuSkaicius (Integer), prekybosTinklas (enum PrekybosTinklai(MAXIMA,IKI,RIMI,LIDL))
+2. Sukurti metoda spausdinti, kuris atspausdintu informacija apie parduotuve: Adresa, darbuotoju skaiciu, prekybos tinkla
+3. Main metode sukurti kelis parduotuviu objektus (sukurti objektus tiek naudojant konstruktoriu su visais parametrais, tiek su tusciu konstruktoriumi ir kintamuju reiksmes priskirti naudojant set metodus.
+4. Pagrindineje klaseje sukurti metoda didziausiaParduotuve, kuris nieko negrazintu, bet kaip argumenta priimtu parduotuviu sarasa ir surastu parduotuve, kurioje dirba daugiausiai darbuotoju ir isspausdintu i ekrana
+5. Sukurtus parduotuviu objektus sudeti i sarasa ir isbandyti metoda didziausiaParduotuve
+6. Sukurti interfeisa Vesinimas, kuris turetu viena metoda ijungtiKondicioneriu. Metodas nieko negrazina ir nieko nereikalauja argumentuose
+7. Klaseje Parduotuve implementuoti si interfeisa ir jame esanti metoda ijungtiKondicionieriu. Naudojant switch-case tikrinti kokiam prekybos tinklui priklauso parduotuve ir atspausdinti skirtingus pranesimus:
+Maxima: "Temperatura 20 laipsniu", IKI: "Temperatura 19 laipsniu", RIMI: "Temperatura 18 laipsniu", LIDL: "Temperatura 17 laipsniu"
+8. Main metode pakviesti metoda ijungtiKondicioneriu skirtingoms parduotuvems ir patikrinti, ar atspausdinami atitinkami pranesimai pagal prekybos tinkla
+
+
+*****************************************************
+
+1. Sukurti klase Preke, kuri turetu kintamuosius: pavadinimas(String), Kaina(Double)
+2. Parasyti metoda spausdinti, kuris atspausdintu informacija apie preke: pavadinima, kaina
+3. Main metode sukurti kelias prekes (tiek naudojant konstruktoriu su parametrais, tiek naudojant konstruktoriu be parametru, reiksmes priskirti naudojant set metodus)
+4. Pagrindineje klase sukurti metoda pigiosPrekes, kuris priimtu 2 parametrus (argumentus): prekiu sarasa ir kaina(Double). Metodas turetu atrinkti ir isspausdinti tas prekes, kuriu kaina yra mazesne uz nurodyta parametre
+5. Sukurtas prekes sudeti i sarasa ir isbandyti metoda pigiosPrekes
+6. Sukurti klase AkcijinePreke, kuri extendintu klase preke ir turetu papildoma lauka nuolaidosProcentas (Integer)
+7. Parasyti konstruktoriu, naudojant tevines klases konstruktoriu (super)
+8. Uzkloti (@Override) metoda spausdinti. Jame isspausdinti informacija apie preke, kartu nurodant ir nuolaidos procenta
+9. Pagrindineje klaseje parasyti metoda maziausiaNuolaida, kuris priimtu akcijiniu prekiu sarasa ir jame rastu preke, kurios nuolaidos procentas yra maziausias ir ja atspausdintu
+10. Klaseje Preke parasyti metoda parduotiPreke, kuris isspausdintu pranesima kokia preke yra parduodama ir grazintu jos kaina.
+
+
+******************************************************
+
+
+1. Klase Parduotuve papildyti Prekiu sarasu (ArrayList<Preke>). Atitinkamai pakeisti konstruktoriu, prideti papildomus get/set metodus
+2. Pagrindineje klaseje kuriant parduotuves objektus, itraukti ir prekiu, kuriu yra toje parduotuveje sarasa (pasidaryti kelis atskirus prekiu sarasus)
+3. Klaseje Parduotuve parasyti metoda pigiausiaParduotuvesPreke, kuris nieko nepriimtu ir nieko negrazintu, tiesiog surastu is visu parduotuveje esanciu prekiu pacia pigiausia ir ja atspausdintu
+4. Susikurti custom exceptiona NetinkamaPrekesKaina, kuris extendintu klase Exception ir turetu Double kintamaji kaina
+5. Pakeisti klaseje Preke sukurta metoda parduotiPreke (2.10 punktas). Jame patikrinti ar parduodamos prekes kaina yra daugiau uz nuli. Jeigu daugiau viskas lieka taip pat, kitu atveju ismesti exceptiona NetinkamaPrekesKaina, kurio message priskirti reiksme: "Netinkama prekes kaina", o kintamajam kaina priskirti prekes kaina.
+6. Klaseje Parduotuve otiPreke, bei handlinti (try/catch) NetinkamaPrekesKaina exceptiona.
+7. Pagrindineje klaseje pasikurti prekiu sarasa, kur bent viena preke turetu neigiama kaina, prekiu sarasa priskirti kazkuriai parduotuvei ir iskviesti parasyta metoda parduotiVisasParduotuvesPrekes.
+
+
+******************************************************
+
+
+Saunuolis(-e)! Gero poilsio.
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ 
