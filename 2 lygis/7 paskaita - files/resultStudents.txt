@@ -1,0 +1,25 @@
+Original students list: 
+Student name: Romas, student nr: INF004 course: 4, Phone: +370625599845 
+Student name: Tomas, student nr: INF003 course: 2, Phone: +370625599447 
+Student name: Lukas, student nr: INF003 course: 2, Phone: +370625599845 
+Student name: Gabriele, student nr: MED#2 course: 4, Phone: +370625444444 
+Student name: Akvile, student nr: MED#3 course: 4, Phone: +370625578553 
+Student name: Agne, student nr: FIZ-14 course: 4, Phone: +370625556698 
+Non first course students: 
+Student name: Romas, student nr: INF004 course: 4, Phone: +370625599845 
+Student name: Tomas, student nr: INF003 course: 2, Phone: +370625599447 
+Student name: Lukas, student nr: INF003 course: 2, Phone: +370625599845 
+Student name: Gabriele, student nr: MED#2 course: 4, Phone: +370625444444 
+Student name: Akvile, student nr: MED#3 course: 4, Phone: +370625578553 
+Student name: Agne, student nr: FIZ-14 course: 4, Phone: +370625556698 
+Female students: 
+Student name: Gabriele, student nr: MED#2 course: 4, Phone: +370625444444 
+Student name: Akvile, student nr: MED#3 course: 4, Phone: +370625578553 
+Student name: Agne, student nr: FIZ-14 course: 4, Phone: +370625556698 
+Sorted by name students: 
+Student name: Agne, student nr: FIZ-14 course: 4, Phone: +370625556698 
+Student name: Akvile, student nr: MED#3 course: 4, Phone: +370625578553 
+Student name: Gabriele, student nr: MED#2 course: 4, Phone: +370625444444 
+Student name: Lukas, student nr: INF003 course: 2, Phone: +370625599845 
+Student name: Romas, student nr: INF004 course: 4, Phone: +370625599845 
+Student name: Tomas, student nr: INF003 course: 2, Phone: +370625599447 

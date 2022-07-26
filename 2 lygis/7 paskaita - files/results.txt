@@ -1,0 +1,10 @@
+Original data list: 
+String1,String2,String3,HAHA,Abraom,Antradienis,2Kvepavimas,
+Strings containing a/A 
+HAHA,Abraom,Antradienis,2Kvepavimas,
+Strings longer than 6 count: 5
+List ordered unalphabetic order: 
+String3,String2,String1,HAHA,Antradienis,Abraom,2Kvepavimas,
+unique strings count: 7
+Strings starting with letter S 
+String1,String2,String3,
