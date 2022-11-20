@@ -1,16 +1,16 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.example.demo.objects.TodoTask;
+import com.example.demo.service.TodoTaskService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/todotask")
 public class TodoTaskController {
-	
+
+	@Autowired
+	private TodoTaskService todoTaskService;
 	
 	@PostMapping("/print")
 	public TodoTask printToDoTask(@RequestBody TodoTask task) {
@@ -21,7 +21,13 @@ public class TodoTaskController {
 		return task;
 	}
 	
-	
-	
+	@GetMapping("/capitalize-title")
+	public TodoTask capitalizeTitle(@RequestBody TodoTask task) {
+		return todoTaskService.capitalizeTitle(task);
+	}
 
+	@GetMapping("/count-assignees")
+	public TodoTask countAssignees(@RequestBody TodoTask task) {
+		return todoTaskService.countAssignees(task);
+	}
 }

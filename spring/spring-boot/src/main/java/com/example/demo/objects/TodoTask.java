@@ -11,5 +11,6 @@ public class TodoTask {
 
 	String title;
 	String content;
-
+	String[] assigneeNames;
+	int counter;
 }
