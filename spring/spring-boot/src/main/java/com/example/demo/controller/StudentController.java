@@ -1,7 +1,10 @@
-package com.example.demo.student.rest;
+package com.example.demo.controller;
 
-import com.example.demo.student.Student;
-import com.example.demo.student.StudentRepo;
+import com.example.demo.dto.StudentDto;
+import com.example.demo.entity.Student;
+import com.example.demo.mapper.StudentMapper;
+import com.example.demo.repository.StudentRepo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

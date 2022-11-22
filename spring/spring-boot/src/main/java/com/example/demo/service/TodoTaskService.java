@@ -1,7 +1,8 @@
 package com.example.demo.service;
 
-import com.example.demo.objects.TodoTask;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.TodoTask;
 
 @Service
 public class TodoTaskService {

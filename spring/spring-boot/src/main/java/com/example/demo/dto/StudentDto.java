@@ -1,4 +1,4 @@
-package com.example.demo.student.rest;
+package com.example.demo.dto;
 
 public class StudentDto {
 

@@ -1,7 +1,9 @@
-package com.example.demo.student.rest;
+package com.example.demo.mapper;
 
-import com.example.demo.student.Student;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.StudentDto;
+import com.example.demo.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;

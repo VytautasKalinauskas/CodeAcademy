@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.objects.TodoTask;
+import com.example.demo.dto.TodoTask;
 import com.example.demo.service.MathService;
 
 @RestController("/math")
