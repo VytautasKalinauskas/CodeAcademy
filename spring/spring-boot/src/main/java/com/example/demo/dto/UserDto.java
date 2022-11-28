@@ -1,23 +1,19 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
 
-import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
-@Table(name = "students")
-public class Student {
+public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "personal_code")
-    private String personalCode;
+    private String email;
+
+    private List<TodoTaskDto> tasks = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -43,11 +39,19 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public String getPersonalCode() {
-        return personalCode;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPersonalCode(String personalCode) {
-        this.personalCode = personalCode;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<TodoTaskDto> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<TodoTaskDto> tasks) {
+        this.tasks = tasks;
     }
 }
