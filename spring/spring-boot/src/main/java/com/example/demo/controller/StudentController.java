@@ -59,4 +59,14 @@ public class StudentController {
             service.delete(id);
         }
     }
+
+    @GetMapping("/find-by-name-fragment/{fragment}")
+    public List<StudentDto> findByNameFragment(@PathVariable String fragment) {
+        return mapper.toDto(service.findByFirstNameStartingWith(fragment));
+    }
+
+    @GetMapping("/count-by-name-fragment/{fragment}")
+    public long countByNameFragment(@PathVariable String fragment) {
+        return service.countByFirstNameStartingWith(fragment);
+    }
 }

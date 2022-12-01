@@ -31,4 +31,12 @@ public class StudentService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+
+    public long countByFirstNameStartingWith(String firstNameFragment) {
+        return repo.countByFirstNameStartingWith(firstNameFragment);
+    }
+
+    public List<Student> findByFirstNameStartingWith(String firstNameFragment) {
+        return repo.findByFirstNameBeginning(firstNameFragment);
+    }
 }
