@@ -21,6 +21,7 @@ public class CourseMapper {
 
         dto.setId(entity.getId());
         dto.setTitle(entity.getTitle());
+        dto.setCode(entity.getCode());
         dto.setStudents(fromStudentEntityToDto(entity.getStudents()));
 
         return dto;
@@ -45,6 +46,7 @@ public class CourseMapper {
 
         entity.setId(dto.getId());
         entity.setTitle(dto.getTitle());
+        entity.setCode(dto.getCode());
         entity.setStudents(fromStudentDtoToEntity(dto.getStudents()));
 
         return entity;

@@ -15,6 +15,9 @@ public class Course {
     @Column
     private String title;
 
+    @Column
+    private String code;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "students_courses",
             joinColumns = @JoinColumn(name = "course_id"),
@@ -35,6 +38,14 @@ public class Course {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public List<Student> getStudents() {

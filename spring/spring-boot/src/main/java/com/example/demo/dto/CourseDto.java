@@ -9,6 +9,8 @@ public class CourseDto {
 
     private String title;
 
+    private String code;
+
     private List<StudentDto> students = new ArrayList<>();
 
     public Long getId() {
@@ -25,6 +27,14 @@ public class CourseDto {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public List<StudentDto> getStudents() {
