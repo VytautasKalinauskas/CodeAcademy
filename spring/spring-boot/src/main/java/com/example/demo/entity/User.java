@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,21 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
+    private String password;
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private List<TodoTask> tasks = new ArrayList<>();
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -63,5 +73,21 @@ public class User {
 
     public void setTasks(List<TodoTask> tasks) {
         this.tasks = tasks;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }

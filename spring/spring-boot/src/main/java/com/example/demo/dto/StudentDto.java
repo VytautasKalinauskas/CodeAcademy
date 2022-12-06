@@ -1,5 +1,7 @@
 package com.example.demo.dto;
 
+import com.example.demo.entity.University;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,8 @@ public class StudentDto {
     private String lastName;
 
     private String personalCode;
+
+    private Long universityId;
 
     private List<CourseDto> courses = new ArrayList<>();
 
@@ -46,6 +50,10 @@ public class StudentDto {
     public void setPersonalCode(String personalCode) {
         this.personalCode = personalCode;
     }
+
+    public Long getUniversityId() { return universityId; }
+
+    public void setUniversityId(Long universityId) { this.universityId = universityId; }
 
     public List<CourseDto> getCourses() {
         return courses;

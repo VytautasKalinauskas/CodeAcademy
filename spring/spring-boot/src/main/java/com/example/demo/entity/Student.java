@@ -21,6 +21,10 @@ public class Student {
     @Column(name = "personal_code")
     private String personalCode;
 
+	@ManyToOne
+	@JoinColumn(name = "university_id")
+	private University university;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "students_courses",
     joinColumns = @JoinColumn(name = "student_id"),
@@ -57,6 +61,14 @@ public class Student {
 
     public void setPersonalCode(String personalCode) {
         this.personalCode = personalCode;
+    }
+
+    public University getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(University university) {
+        this.university = university;
     }
 
     public List<Course> getCourses() {

@@ -4,6 +4,7 @@ import com.example.demo.dto.CourseDto;
 import com.example.demo.dto.StudentDto;
 import com.example.demo.entity.Course;
 import com.example.demo.entity.Student;
+import com.example.demo.entity.University;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ public class StudentMapper {
         dto.setFirstName(entity.getFirstName());
         dto.setLastName(entity.getLastName());
         dto.setPersonalCode(entity.getPersonalCode());
+        if(entity.getUniversity() != null) {
+            dto.setUniversityId(entity.getUniversity().getId());
+        }
         dto.setCourses(fromCourseEntityToDto(entity.getCourses()));
 
         return dto;
@@ -50,6 +54,11 @@ public class StudentMapper {
         entity.setLastName(dto.getLastName());
         entity.setPersonalCode(dto.getPersonalCode());
         entity.setCourses(fromCourseDtoToEntity(dto.getCourses()));
+        if(dto.getUniversityId() != null) {
+            University university = new University();
+            university.setId(dto.getUniversityId());
+            entity.setUniversity(university);
+        }
 
         return entity;
     }
@@ -73,6 +82,7 @@ public class StudentMapper {
 
         dto.setId(entity.getId());
         dto.setTitle(entity.getTitle());
+        dto.setCode(entity.getCode());
 
         return dto;
     }
@@ -96,6 +106,7 @@ public class StudentMapper {
 
         entity.setId(dto.getId());
         entity.setTitle(dto.getTitle());
+        entity.setCode(dto.getCode());
 
         return entity;
     }

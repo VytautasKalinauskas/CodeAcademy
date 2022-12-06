@@ -5,6 +5,7 @@ import com.example.demo.entity.Student;
 import com.example.demo.mapper.StudentMapper;
 import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class StudentController {
     @Autowired
     private StudentService service;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/")
     public List<StudentDto> findAll() {
         return mapper.toDto(service.findAll());
@@ -25,38 +27,35 @@ public class StudentController {
 
     @GetMapping("/{id}")
     public StudentDto findOne(@PathVariable Long id) {
-        Student entity = service.findById(id);
+        StudentDto student = service.findById(id);
 
-        return mapper.toDto(entity);
+        return student;
     }
 
     @PostMapping("/")
     public StudentDto create(@RequestBody StudentDto dto) {
-        Student entity = mapper.fromDto(dto);
 
-        Student savedEntity = service.save(entity);
-
-        return mapper.toDto(savedEntity);
+        return service.createStudent(dto);
     }
 
     @PutMapping("/")
     public StudentDto update(@RequestBody StudentDto dto) {
         Student entity = mapper.fromDto(dto);
-        Student existing = service.findById(entity.getId());
-        if (existing == null) {
+        StudentDto existingStudent = service.findById(entity.getId());
+        if (existingStudent == null) {
             throw new IllegalArgumentException("'Student' entity not found for update!");
         }
 
-        Student savedEntity = service.save(entity);
+        existingStudent = service.createStudent(dto);
 
-        return mapper.toDto(savedEntity);
+        return existingStudent;
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        Student entity = service.findById(id);
-        if (entity != null) {
-            service.delete(id);
+        StudentDto student = service.findById(id);
+        if (student != null) {
+            service.deleteStudent(id);
         }
     }
 
